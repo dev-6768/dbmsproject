@@ -1,6 +1,6 @@
-# my_gardening_app
+# Ecommerce app
 
-A new Flutter project.
+Ecommerce app pertaining to general product sale in dart.
 
 ## Getting Started
 
