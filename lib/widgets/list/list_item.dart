@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -144,7 +145,7 @@ class ProductDisplayContainer extends StatelessWidget {
 
       child: ListTile(
         key: Key(item!.image1!),
-        leading: CircleAvatar(backgroundImage: Image.network(item!.image1!).image),
+        leading: CircleAvatar(child: SizedBox(child: CachedNetworkImage(imageUrl: item!.image1!,))),
         trailing: Text(
           item!.price!,
           style: TextStyle(

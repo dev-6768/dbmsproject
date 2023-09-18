@@ -1,3 +1,5 @@
+import 'dart:js_interop';
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:my_gardening_app/firebase_class/FirebaseControllers.dart';
@@ -318,7 +320,7 @@ class _WishListState extends State<WishList> {
 
         else if(snapshot.hasData) {
           final data = snapshot.data as List<AddToWishlistContainer>;
-          if(data.isNotEmpty) {
+          if(data.isNotEmpty && !data[0].name.isNull && !data[0].price.isNull && !data[0].image.isNull && !data[0].productId.isNull && !data[0].shortDesc.isNull && !data[0].userId.isNull) {
             return Padding(padding: EdgeInsets.symmetric(vertical: 16.0, horizontal: 16.0),
                       child: SingleChildScrollView(
                         child: Column(
@@ -445,7 +447,7 @@ class _AddToCartState extends State<AddToCart> {
 
         else if(snapshot.hasData) {
           final data = snapshot.data as List<AddToCartContainer>;
-          if(data.isNotEmpty) {
+          if(data.isNotEmpty && !data[0].name.isNull && !data[0].price!.isEmpty && !data[0].image.isNull && !data[0].productId.isNull && !data[0].shortDesc.isNull && !data[0].userId.isNull && !data[0].prodQuantity.isNull) {
             return Padding(padding: EdgeInsets.symmetric(vertical: 16.0, horizontal: 16.0),
                       child: SingleChildScrollView(
                         child: Column(

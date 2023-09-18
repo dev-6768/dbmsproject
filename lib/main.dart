@@ -35,7 +35,7 @@ Future<void> main() async {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: MyThemeData().MyThemeDataForApp(context),
-      
+      title: "ShopEazy",
       themeMode: ThemeMode.light,
       darkTheme: ThemeData(
         brightness: Brightness.light
