@@ -1,6 +1,6 @@
-# Ecommerce app
+# Ecommerce app 
 
-Ecommerce app pertaining to general product sale in dart.
+Ecommerce app pertaining to general product sale in dart and flutter.
 
 ## Getting Started
 
